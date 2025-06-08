@@ -31,8 +31,8 @@ pipeline {
                 }
             }
             steps {
-                echo "🎯 Build de l'image avec Docker"
-                sh 'docker build -t my-flask-app:latest .'
+                echo "🎯 Build de l'image avec Buildah"
+                sh 'buildah bud -t my-flask-app:latest .'
             }
         }
 
