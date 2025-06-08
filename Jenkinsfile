@@ -19,12 +19,9 @@ pipeline {
         }
 
         stage('Build Image') {
-            when {
-                changeset "**/*.py, Dockerfile"
-            }
             steps {
-                echo "Build Docker image..."
-                sh 'docker build -t my-flask-app:latest .'
+                echo "🎯 Build de l'image Docker avec Buildah"
+                sh 'buildah bud -t my-flask-app:latest .'
             }
         }
     }
