@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'local-agent' }
+    agent { label 'linux-agent' }
 
     parameters {
         choice(name: 'ENVIRONMENT', choices: ['dev', 'staging', 'prod'], description: 'Choisir l’environnement')
